@@ -1,0 +1,8 @@
+# Local and generated files
+_pdf_text.txt
+assets/_pdf_text.txt
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/

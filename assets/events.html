@@ -1,0 +1,738 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>WOOD PASSION EVENT</title>
+
+  <meta property="og:title" content="WOOD PASSION">
+  <meta property="og:description" content="Custom wood creations and woodworking products.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.wood-passion.com/event">
+  <meta property="og:image" content="https://wood-passion.com///storage/media/3PGAPatvEqFrLXewyT141zRZ2OPXPt4s4XvkRGm6.jpg">
+  <meta property="og:image:width" content="600">
+  <meta property="og:image:height" content="600">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <style>
+    :root {
+      --image: url("https://wood-passion.com///storage/media/0KWLwaC9NFv8DopQ0MD1zLisBANrgIH8z5PZuImC.png");
+      --cream: #fff4df;
+      --gold: #f5c16b;
+      --brown: #8a4f22;
+      --dark: #080403;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      width: 100%;
+      min-height: 100%;
+      background: transparent;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--cream);
+      overflow-x: hidden;
+    }
+
+    body {
+      background:
+        radial-gradient(circle at 20% 20%, rgba(245,193,107,.22), transparent 30%),
+        radial-gradient(circle at 80% 10%, rgba(138,79,34,.24), transparent 34%),
+        radial-gradient(circle at 55% 100%, rgba(245,193,107,.12), transparent 36%),
+        linear-gradient(135deg,#070403,#160b05 45%,#080403);
+    }
+
+    .event-wrap {
+      min-height: 100vh;
+      padding: 42px 18px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .grain {
+      position: absolute;
+      inset: 0;
+      opacity: .17;
+      background:
+        repeating-linear-gradient(
+          105deg,
+          transparent 0,
+          transparent 22px,
+          rgba(255,191,104,.12) 23px,
+          transparent 25px
+        );
+      animation: grainMove 13s linear infinite alternate;
+      pointer-events: none;
+    }
+
+    @keyframes grainMove {
+      from { transform: translateX(-80px); }
+      to { transform: translateX(80px); }
+    }
+
+    .glow-one,
+    .glow-two {
+      position: absolute;
+      border-radius: 999px;
+      filter: blur(70px);
+      pointer-events: none;
+    }
+
+    .glow-one {
+      width: 320px;
+      height: 320px;
+      background: rgba(245,193,107,.14);
+      top: 5%;
+      left: 5%;
+    }
+
+    .glow-two {
+      width: 380px;
+      height: 380px;
+      background: rgba(138,79,34,.22);
+      right: 3%;
+      bottom: 5%;
+    }
+
+    .particles {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .particle {
+      position: absolute;
+      bottom: -30px;
+      width: var(--size);
+      height: var(--size);
+      left: var(--left);
+      border-radius: 50%;
+      background: rgba(245,193,107,.48);
+      filter: blur(.5px);
+      animation: floatUp var(--duration) linear infinite;
+      animation-delay: var(--delay);
+    }
+
+    @keyframes floatUp {
+      0% {
+        opacity: 0;
+        transform: translateY(0) translateX(0) scale(.8);
+      }
+
+      12% {
+        opacity: .8;
+      }
+
+      80% {
+        opacity: .42;
+      }
+
+      100% {
+        opacity: 0;
+        transform: translateY(-110vh) translateX(var(--drift)) scale(1.25);
+      }
+    }
+
+    .shell {
+      width: min(1180px, 100%);
+      margin: 0 auto;
+      position: relative;
+      z-index: 3;
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 34px;
+      align-items: center;
+    }
+
+    .card {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(255,217,150,.25);
+      background:
+        linear-gradient(145deg, rgba(255,255,255,.11), rgba(255,255,255,.035)),
+        rgba(15,8,4,.75);
+      box-shadow:
+        0 30px 90px rgba(0,0,0,.55),
+        inset 0 1px 0 rgba(255,255,255,.12);
+      border-radius: 34px;
+      backdrop-filter: blur(18px);
+    }
+
+    .content {
+      padding: clamp(28px, 5vw, 58px);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 14px;
+      border: 1px solid rgba(245,193,107,.32);
+      border-radius: 999px;
+      background: rgba(245,193,107,.08);
+      color: var(--gold);
+      letter-spacing: .18em;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: 0 0 0 rgba(245,193,107,.7);
+      animation: pulse 1.7s infinite;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(245,193,107,.75); }
+      70% { box-shadow: 0 0 0 14px rgba(245,193,107,0); }
+      100% { box-shadow: 0 0 0 0 rgba(245,193,107,0); }
+    }
+
+    h1 {
+      font-size: clamp(44px, 8vw, 94px);
+      line-height: .88;
+      letter-spacing: -.075em;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+      color: #fff7e8;
+    }
+
+    h1 span {
+      display: block;
+      color: transparent;
+      background: linear-gradient(90deg, #fff7e8, #f5c16b 35%, #a35d25 62%, #fff1cf);
+      background-size: 240% auto;
+      -webkit-background-clip: text;
+      background-clip: text;
+      animation: goldSweep 5s ease-in-out infinite alternate;
+    }
+
+    @keyframes goldSweep {
+      from { background-position: 0% center; }
+      to { background-position: 100% center; }
+    }
+
+    .lead {
+      max-width: 640px;
+      color: rgba(255,244,223,.78);
+      font-size: clamp(16px, 2vw, 20px);
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+
+    .countdown {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      gap: 12px;
+      margin: 30px 0 26px;
+    }
+
+    .time-box {
+      flex: 1 1 120px;
+      min-width: 120px;
+      min-height: 105px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 22px;
+      border: 1px solid rgba(245,193,107,.22);
+      background: linear-gradient(145deg, rgba(245,193,107,.13), rgba(255,255,255,.04));
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      isolation: isolate;
+    }
+
+    .time-box::before {
+      content: "";
+      position: absolute;
+      inset: -80%;
+      background: linear-gradient(115deg, transparent, rgba(255,255,255,.18), transparent);
+      transform: translateX(-85%) rotate(15deg);
+      animation: shine 4.8s infinite;
+      z-index: -1;
+    }
+
+    @keyframes shine {
+      0% { transform: translateX(-85%) rotate(15deg); }
+      38%, 100% { transform: translateX(85%) rotate(15deg); }
+    }
+
+    .time-box strong {
+      font-size: clamp(30px, 5vw, 48px);
+      line-height: 1;
+      color: #fff6df;
+      text-shadow: 0 0 22px rgba(245,193,107,.35);
+    }
+
+    .time-box small {
+      margin-top: 9px;
+      color: rgba(255,244,223,.64);
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      font-size: 11px;
+      font-weight: 800;
+    }
+
+    .progress-wrap {
+      width: 100%;
+      height: 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(245,193,107,.22);
+      background: rgba(255,255,255,.07);
+      overflow: hidden;
+      margin-bottom: 22px;
+    }
+
+    .progress {
+      width: 0%;
+      height: 100%;
+      background: linear-gradient(90deg,#c9873b,#f5c16b,#fff0c1);
+      border-radius: 999px;
+      box-shadow: 0 0 20px rgba(245,193,107,.55);
+      transition: width .6s ease;
+    }
+
+    .meta-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .pill {
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.13);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,244,223,.82);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 0 24px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 900;
+      letter-spacing: .02em;
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .btn-primary {
+      color: #170c05;
+      background: linear-gradient(135deg,#fff2ca,#f5c16b,#b96f2b);
+      box-shadow: 0 15px 35px rgba(245,193,107,.26);
+    }
+
+    .btn-secondary {
+      color: var(--cream);
+      border: 1px solid rgba(255,255,255,.18);
+      background: rgba(255,255,255,.07);
+    }
+
+    .visual {
+      min-height: 660px;
+      display: grid;
+      place-items: center;
+      padding: 22px;
+      perspective: 1200px;
+    }
+
+    .image-stage {
+      position: relative;
+      width: min(500px, 100%);
+      aspect-ratio: 1 / 1.16;
+      border-radius: 34px;
+      transform-style: preserve-3d;
+      animation: floatCard 6s ease-in-out infinite;
+    }
+
+    @keyframes floatCard {
+      0%, 100% { transform: translateY(0) rotateX(0deg) rotateY(0deg); }
+      50% { transform: translateY(-16px) rotateX(2deg) rotateY(-3deg); }
+    }
+
+    .image-stage::before {
+      content: "";
+      position: absolute;
+      inset: -18px;
+      border-radius: 44px;
+      background:
+        conic-gradient(
+          from 180deg,
+          transparent,
+          rgba(245,193,107,.9),
+          transparent,
+          rgba(138,79,34,.9),
+          transparent
+        );
+      filter: blur(18px);
+      opacity: .75;
+      animation: rotateGlow 9s linear infinite;
+    }
+
+    @keyframes rotateGlow {
+      to { transform: rotate(360deg); }
+    }
+
+    .product-image {
+      position: absolute;
+      inset: 0;
+      border-radius: 34px;
+      overflow: hidden;
+      border: 1px solid rgba(255,224,166,.28);
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.12), rgba(0,0,0,.45)),
+        var(--image) center / cover no-repeat;
+      box-shadow:
+        0 35px 90px rgba(0,0,0,.6),
+        inset 0 0 0 1px rgba(255,255,255,.09);
+    }
+
+    .product-image::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(
+          115deg,
+          transparent 0%,
+          transparent 35%,
+          rgba(255,255,255,.28) 44%,
+          transparent 56%,
+          transparent 100%
+        );
+      transform: translateX(-120%);
+      animation: imageFlash 5.5s ease-in-out infinite;
+    }
+
+    @keyframes imageFlash {
+      0%, 30% { transform: translateX(-120%); }
+      55%, 100% { transform: translateX(120%); }
+    }
+
+    .floating-tag {
+      position: absolute;
+      z-index: 3;
+      border-radius: 22px;
+      border: 1px solid rgba(245,193,107,.25);
+      background: rgba(12,7,4,.76);
+      backdrop-filter: blur(14px);
+      box-shadow: 0 20px 60px rgba(0,0,0,.35);
+      color: var(--cream);
+      padding: 15px 17px;
+      font-weight: 900;
+    }
+
+    .floating-tag small {
+      display: block;
+      margin-top: 4px;
+      color: rgba(255,244,223,.62);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .tag-one {
+      left: -18px;
+      top: 54px;
+      animation: tagMove 4.5s ease-in-out infinite;
+    }
+
+    .tag-two {
+      right: -18px;
+      bottom: 34px;
+      animation: tagMove 5.2s ease-in-out infinite reverse;
+    }
+
+    @keyframes tagMove {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-12px); }
+    }
+
+    .live .eyebrow {
+      color: #ffffff;
+      background: rgba(79,255,165,.12);
+      border-color: rgba(79,255,165,.35);
+    }
+
+    .live .dot {
+      background: #4fffa5;
+    }
+
+    .ended .eyebrow {
+      color: rgba(255,244,223,.7);
+      background: rgba(255,255,255,.06);
+      border-color: rgba(255,255,255,.14);
+    }
+
+    @media (max-width: 920px) {
+      .event-wrap {
+        padding: 28px 14px;
+      }
+
+      .shell {
+        grid-template-columns: 1fr;
+      }
+
+      .visual {
+        min-height: auto;
+        padding-top: 0;
+      }
+
+      .image-stage {
+        width: min(470px, 92vw);
+      }
+    }
+
+    @media (max-width: 560px) {
+      .content {
+        padding: 26px 18px;
+        border-radius: 26px;
+      }
+
+      .countdown {
+        justify-content: flex-start;
+      }
+
+      .time-box {
+        flex: 0 0 calc(50% - 6px);
+        min-width: 0;
+        min-height: 92px;
+      }
+
+      .tag-one {
+        left: 10px;
+        top: 18px;
+      }
+
+      .tag-two {
+        right: 10px;
+        bottom: 22px;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section class="event-wrap">
+    <div class="grain"></div>
+    <div class="glow-one"></div>
+    <div class="glow-two"></div>
+    <div class="particles" id="particles"></div>
+
+    <div class="shell">
+      <div class="card content">
+        <div class="eyebrow" id="statusBadge">
+          <span class="dot"></span>
+          <span id="statusText">Coming Soon</span>
+        </div>
+
+        <h1>
+          WOOD
+          <span>PASSION</span>
+          EVENT
+        </h1>
+
+        <p class="lead" id="eventMessage">
+          A special four-day showcase for handcrafted wooden pieces, warm natural textures,
+          limited designs, and premium furniture made to catch the eye.
+        </p>
+
+        <div class="countdown">
+          <div class="time-box">
+            <strong id="days">00</strong>
+            <small>Days</small>
+          </div>
+
+          <div class="time-box">
+            <strong id="hours">00</strong>
+            <small>Hours</small>
+          </div>
+
+          <div class="time-box">
+            <strong id="minutes">00</strong>
+            <small>Minutes</small>
+          </div>
+
+          <div class="time-box">
+            <strong id="seconds">00</strong>
+            <small>Seconds</small>
+          </div>
+        </div>
+
+        <div class="progress-wrap">
+          <div class="progress" id="progress"></div>
+        </div>
+
+        <div class="meta-row">
+          <div class="pill">Starts: 21 May 2026</div>
+          <div class="pill">Duration: 4 Days</div>
+          <div class="pill">Online Event</div>
+        </div>
+
+        <div class="actions">
+          <a class="btn btn-primary" id="mainButton" href="https://www.wood-passion.com/" target="_top">
+            Visit Wood Passion
+          </a>
+
+          <a class="btn btn-secondary" href="https://www.wood-passion.com/" target="_top">
+            Explore Products
+          </a>
+        </div>
+      </div>
+
+      <div class="visual">
+        <div class="image-stage">
+          <div class="product-image"></div>
+
+          <div class="floating-tag tag-one">
+            Limited Showcase
+            <small>Natural wood creations</small>
+          </div>
+
+          <div class="floating-tag tag-two">
+            4 Days Only
+            <small>Premium handcrafted pieces</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const EVENT_START = new Date("2026-05-21T00:00:00+03:00").getTime();
+    const EVENT_END = new Date("2026-05-25T00:00:00+03:00").getTime();
+
+    const daysEl = document.getElementById("days");
+    const hoursEl = document.getElementById("hours");
+    const minutesEl = document.getElementById("minutes");
+    const secondsEl = document.getElementById("seconds");
+    const progressEl = document.getElementById("progress");
+    const statusText = document.getElementById("statusText");
+    const eventMessage = document.getElementById("eventMessage");
+    const mainButton = document.getElementById("mainButton");
+
+    function pad(number) {
+      return String(number).padStart(2, "0");
+    }
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+
+      let targetDate;
+      let progress = 0;
+
+      document.body.classList.remove("live", "ended");
+
+      if (now < EVENT_START) {
+        targetDate = EVENT_START;
+
+        statusText.textContent = "Coming Soon";
+        eventMessage.textContent =
+          "The Wood Passion Event is almost here. Get ready for four days of handcrafted wooden designs, warm natural textures, and premium furniture pieces.";
+        mainButton.textContent = "Visit Wood Passion";
+
+        const baseStart = new Date("2026-01-01T00:00:00+03:00").getTime();
+        const totalBeforeEvent = EVENT_START - baseStart;
+        const passedBeforeEvent = now - baseStart;
+        progress = Math.max(0, Math.min(100, (passedBeforeEvent / totalBeforeEvent) * 100));
+      }
+
+      else if (now >= EVENT_START && now < EVENT_END) {
+        targetDate = EVENT_END;
+
+        document.body.classList.add("live");
+
+        statusText.textContent = "Event Is Live";
+        eventMessage.textContent =
+          "The Wood Passion Event is now live. Explore the collection before the four-day event closes.";
+        mainButton.textContent = "Enter The Event";
+
+        const totalEventTime = EVENT_END - EVENT_START;
+        const passedEventTime = now - EVENT_START;
+        progress = Math.max(0, Math.min(100, (passedEventTime / totalEventTime) * 100));
+      }
+
+      else {
+        document.body.classList.add("ended");
+
+        statusText.textContent = "Event Ended";
+        eventMessage.textContent =
+          "The four-day Wood Passion Event has ended. You can still visit the website and explore our latest wooden creations.";
+        mainButton.textContent = "Shop Current Collection";
+
+        daysEl.textContent = "00";
+        hoursEl.textContent = "00";
+        minutesEl.textContent = "00";
+        secondsEl.textContent = "00";
+        progressEl.style.width = "100%";
+        return;
+      }
+
+      const distance = targetDate - now;
+
+      daysEl.textContent = pad(Math.floor(distance / (1000 * 60 * 60 * 24)));
+      hoursEl.textContent = pad(Math.floor((distance / (1000 * 60 * 60)) % 24));
+      minutesEl.textContent = pad(Math.floor((distance / (1000 * 60)) % 60));
+      secondsEl.textContent = pad(Math.floor((distance / 1000) % 60));
+
+      progressEl.style.width = progress + "%";
+    }
+
+    function createParticles() {
+      const container = document.getElementById("particles");
+      const amount = 58;
+
+      for (let i = 0; i < amount; i++) {
+        const particle = document.createElement("span");
+
+        particle.className = "particle";
+        particle.style.setProperty("--left", Math.random() * 100 + "%");
+        particle.style.setProperty("--size", Math.random() * 4 + 2 + "px");
+        particle.style.setProperty("--duration", Math.random() * 12 + 9 + "s");
+        particle.style.setProperty("--delay", Math.random() * -18 + "s");
+        particle.style.setProperty("--drift", (Math.random() * 160 - 80) + "px");
+
+        container.appendChild(particle);
+      }
+    }
+
+    createParticles();
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
