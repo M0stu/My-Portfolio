@@ -1,0 +1,31 @@
+name: Deploy portfolio
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: portfolio-production
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    name: Deploy to cv.rf.gd
+    runs-on: ubuntu-latest
+    environment:
+      name: production
+      url: https://cv.rf.gd
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v5
+
+      - name: Upload static site over FTPS
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        run: python scripts/deploy_ftp.py

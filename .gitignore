@@ -4,5 +4,7 @@ assets/_pdf_text.txt
 .DS_Store
 Thumbs.db
 *.log
+__pycache__/
+*.py[cod]
 .vscode/
 .idea/
