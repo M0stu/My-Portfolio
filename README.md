@@ -7,8 +7,9 @@ A responsive, accessible portfolio for **Mostafa Yakout**, Software Engineer and
 ## Built with
 
 - Semantic HTML5
-- Modern CSS with responsive layouts and light/dark themes
-- Vanilla JavaScript for navigation, theme persistence, section tracking, and progressive reveal effects
+- Modern CSS with responsive editorial layouts and purposeful motion
+- English and Arabic content with complete RTL support
+- Vanilla JavaScript for navigation, language persistence, section tracking, counters, and progressive reveal effects
 - No framework or build step
 
 ## Local preview
